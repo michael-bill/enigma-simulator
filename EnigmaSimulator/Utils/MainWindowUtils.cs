@@ -159,8 +159,8 @@ namespace EnigmaSimulator.Utils
                 Random random = new Random();
                 for (int i = 0; i < Configuration.Compartments.Length; i++) {
                     int index = random.Next(0, Configuration.AllRotors.Length);
-                    Configuration.Compartments[i] = Configuration.AllRotors[index];
-                    Configuration.Compartments[i].Position = random.Next(0, Configuration.ALPH_LENGTH);
+                    Configuration.Compartments[i] = new Enigma.Model.Rotor(Configuration.AllRotors[index]);
+                    Configuration.Compartments[i].Position = random.Next(1, Configuration.ALPH_LENGTH + 1);
                 }
                 // Reflector
                 Configuration.ReflectorСompartment = Configuration.AllReflectors[random.Next(0, Configuration.AllReflectors.Length)];

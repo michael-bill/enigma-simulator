@@ -63,9 +63,9 @@ namespace EnigmaSimulator.View
         private void ComboBoxCom_Changed(object sender, EventArgs e)
         {
             if (loaded) {
-                Configuration.Compartments[0] = Configuration.AllRotors[comboBoxCom1.SelectedIndex];
-                Configuration.Compartments[1] = Configuration.AllRotors[comboBoxCom2.SelectedIndex];
-                Configuration.Compartments[2] = Configuration.AllRotors[comboBoxCom3.SelectedIndex];
+                Configuration.Compartments[0] = new Enigma.Model.Rotor(Configuration.AllRotors[comboBoxCom1.SelectedIndex]);
+                Configuration.Compartments[1] = new Enigma.Model.Rotor(Configuration.AllRotors[comboBoxCom2.SelectedIndex]);
+                Configuration.Compartments[2] = new Enigma.Model.Rotor(Configuration.AllRotors[comboBoxCom3.SelectedIndex]);
                 Configuration.ReflectorСompartment = Configuration.AllReflectors[comboBoxRef.SelectedIndex];
                 UpdateText();
                 changed = true;
