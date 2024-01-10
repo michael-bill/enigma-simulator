@@ -150,8 +150,5 @@
     <None Include="Resources\copyright.png" />
     <None Include="Resources\enigmaico.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\down_arrow.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
