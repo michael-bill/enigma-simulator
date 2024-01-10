@@ -169,6 +169,7 @@ namespace EnigmaSimulator.View
                 EncryptionInfoUtils.FillPreviewPanel(EncryptionInfoPanel);
                 PlugboardUtils.FillPreviewPanel(panelPlugboard);
                 MainWindowUtils.SetInfoLabel(this);
+                MainWindowUtils.SetRotorTextBoxesText(this);
             }
         }
     }

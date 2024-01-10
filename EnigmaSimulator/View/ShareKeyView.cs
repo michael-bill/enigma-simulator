@@ -1,4 +1,5 @@
 ﻿using EnigmaSimulator.Enigma;
+using EnigmaSimulator.Enigma.Model;
 using EnigmaSimulator.Language.Dictionary;
 using EnigmaSimulator.Utils;
 using System;
@@ -86,9 +87,9 @@ namespace EnigmaSimulator.View
                     i++;
                 }
                 changed = true;
-                Configuration.Compartments[0] = Configuration.AllRotors[Array.IndexOf(romanNums, values[0])];
-                Configuration.Compartments[1] = Configuration.AllRotors[Array.IndexOf(romanNums, values[1])];
-                Configuration.Compartments[2] = Configuration.AllRotors[Array.IndexOf(romanNums, values[2])];
+                Configuration.Compartments[0] = new Rotor(Configuration.AllRotors[Array.IndexOf(romanNums, values[0])]);
+                Configuration.Compartments[1] = new Rotor(Configuration.AllRotors[Array.IndexOf(romanNums, values[1])]);
+                Configuration.Compartments[2] = new Rotor(Configuration.AllRotors[Array.IndexOf(romanNums, values[2])]);
                 Configuration.ReflectorСompartment = Configuration.AllReflectors[Array.IndexOf("BC".ToCharArray(), values[3][0])];
                 Configuration.Compartments[0].Position = Int32.Parse(values[4]);
                 Configuration.Compartments[1].Position = Int32.Parse(values[5]);
